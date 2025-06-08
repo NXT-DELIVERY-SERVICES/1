@@ -10,7 +10,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 bg-white">
+    <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -50,7 +50,7 @@ const About = () => {
               <img 
                 src="https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=600" 
                 alt="Delivery team" 
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl w-full h-auto"
               />
               <div className="absolute -bottom-6 -left-6 bg-teal-600 text-white p-6 rounded-lg shadow-lg">
                 <p className="text-2xl font-bold">5+ Years</p>

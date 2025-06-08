@@ -1,43 +1,46 @@
 import React from 'react';
-import { Truck, Clock, Shield, Star } from 'lucide-react';
+import { Truck, Clock, Shield, Star, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="bg-gradient-to-br from-teal-600 via-teal-700 to-teal-800 text-white py-20">
+    <section id="home" className="bg-gradient-to-br from-teal-600 via-teal-700 to-teal-800 text-white py-20 min-h-screen flex items-center">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Fast & Reliable
-                <span className="block text-yellow-400">Delivery Service</span>
-              </h1>
-              <p className="text-xl text-teal-100 mb-8 leading-relaxed">
-                Get your packages delivered quickly and safely with NXT Delivery. 
-                We provide same-day delivery, real-time tracking, and exceptional customer service.
-              </p>
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+                  Fast & Reliable
+                  <span className="block text-yellow-400">Delivery Service</span>
+                </h1>
+                <p className="text-xl text-teal-100 leading-relaxed">
+                  Get your packages delivered quickly and safely with NXT Delivery. 
+                  We provide same-day delivery, real-time tracking, and exceptional customer service.
+                </p>
+              </div>
               
-              <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                   <Clock size={20} className="text-yellow-400" />
-                  <span>Same Day Delivery</span>
+                  <span className="text-sm font-medium">Same Day Delivery</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                   <Shield size={20} className="text-yellow-400" />
-                  <span>100% Secure</span>
+                  <span className="text-sm font-medium">100% Secure</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                   <Star size={20} className="text-yellow-400" />
-                  <span>5-Star Service</span>
+                  <span className="text-sm font-medium">5-Star Service</span>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
                   href="#delivery-form" 
-                  className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-300 transform hover:scale-105 transition-all duration-200 text-center shadow-lg"
+                  className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-300 transform hover:scale-105 transition-all duration-200 text-center shadow-lg flex items-center justify-center space-x-2"
                 >
-                  Schedule Delivery
+                  <span>Schedule Delivery</span>
+                  <ArrowRight size={20} />
                 </a>
                 <a 
                   href="#services" 
@@ -53,7 +56,7 @@ const Hero = () => {
                 <img 
                   src="https://images.pexels.com/photos/4391470/pexels-photo-4391470.jpeg?auto=compress&cs=tinysrgb&w=800" 
                   alt="Delivery service" 
-                  className="rounded-2xl shadow-2xl"
+                  className="rounded-2xl shadow-2xl w-full h-auto"
                 />
               </div>
               <div className="absolute -top-6 -right-6 bg-yellow-400 text-gray-900 p-6 rounded-xl shadow-lg z-20">

@@ -7,42 +7,48 @@ const Services = () => {
       icon: <Clock size={32} />,
       title: 'Same-Day Delivery',
       description: 'Get your packages delivered within hours, not days. Perfect for urgent deliveries.',
-      features: ['2-4 hour delivery', 'Real-time tracking', 'SMS notifications']
+      features: ['2-4 hour delivery', 'Real-time tracking', 'SMS notifications'],
+      price: 'Starting at $15'
     },
     {
       icon: <Truck size={32} />,
       title: 'Express Delivery',
       description: 'Ultra-fast delivery for time-sensitive packages. Delivered within 1 hour.',
-      features: ['1 hour delivery', 'Priority handling', 'Dedicated courier']
+      features: ['1 hour delivery', 'Priority handling', 'Dedicated courier'],
+      price: 'Starting at $25'
     },
     {
       icon: <Package size={32} />,
       title: 'Standard Delivery',
       description: 'Reliable next-day delivery for all your regular shipping needs.',
-      features: ['Next day delivery', 'Affordable rates', 'Secure packaging']
+      features: ['Next day delivery', 'Affordable rates', 'Secure packaging'],
+      price: 'Starting at $8'
     },
     {
       icon: <Shield size={32} />,
       title: 'Secure Handling',
       description: 'Special care for fragile and valuable items with full insurance coverage.',
-      features: ['Insurance included', 'Fragile item care', 'Signature required']
+      features: ['Insurance included', 'Fragile item care', 'Signature required'],
+      price: 'Starting at $20'
     },
     {
       icon: <MapPin size={32} />,
       title: 'Real-Time Tracking',
       description: 'Track your package every step of the way with our advanced tracking system.',
-      features: ['Live GPS tracking', 'Delivery updates', 'ETA notifications']
+      features: ['Live GPS tracking', 'Delivery updates', 'ETA notifications'],
+      price: 'Included'
     },
     {
       icon: <Headphones size={32} />,
       title: '24/7 Support',
       description: 'Round-the-clock customer support to help you with any delivery concerns.',
-      features: ['24/7 availability', 'Live chat support', 'Phone support']
+      features: ['24/7 availability', 'Live chat support', 'Phone support'],
+      price: 'Free'
     }
   ];
 
   return (
-    <section id="services" className="py-16 bg-gray-50">
+    <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -53,15 +59,15 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                <div className="text-teal-600 mb-6">
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2">
+                <div className="text-teal-600 mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-700">
                       <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
@@ -69,11 +75,12 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="text-teal-600 font-bold text-lg">{service.price}</div>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 bg-gradient-to-r from-teal-600 to-teal-700 rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-teal-600 to-teal-700 rounded-2xl p-8 text-white text-center">
             <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="text-teal-100 mb-6 text-lg">
               Choose the delivery service that best fits your needs and schedule your delivery today.

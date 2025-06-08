@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +13,14 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Contact form submitted:', formData);
-    // Handle form submission here
+    alert('Thank you for your message! We will get back to you within 2 hours.');
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: ''
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -24,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-white">
+    <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -40,47 +47,47 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
               
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
                   <div className="bg-teal-100 p-3 rounded-lg">
                     <Phone size={24} className="text-teal-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600 font-medium">+1 (555) 123-4567</p>
                     <p className="text-sm text-gray-500">Available 24/7 for urgent deliveries</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
                   <div className="bg-teal-100 p-3 rounded-lg">
                     <Mail size={24} className="text-teal-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">info@nxtdelivery.com</p>
+                    <p className="text-gray-600 font-medium">info@nxtdelivery.com</p>
                     <p className="text-sm text-gray-500">We'll respond within 2 hours</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
                   <div className="bg-teal-100 p-3 rounded-lg">
                     <MapPin size={24} className="text-teal-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
-                    <p className="text-gray-600">123 Delivery Street<br />Business District, City 12345</p>
+                    <p className="text-gray-600 font-medium">123 Delivery Street<br />Business District, City 12345</p>
                     <p className="text-sm text-gray-500">Visit our office for special arrangements</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-4 p-4 bg-gray-50 rounded-lg">
                   <div className="bg-teal-100 p-3 rounded-lg">
                     <Clock size={24} className="text-teal-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Business Hours</h4>
-                    <p className="text-gray-600">Monday - Friday: 8:00 AM - 8:00 PM</p>
-                    <p className="text-gray-600">Saturday - Sunday: 9:00 AM - 6:00 PM</p>
+                    <p className="text-gray-600 font-medium">Monday - Friday: 8:00 AM - 8:00 PM</p>
+                    <p className="text-gray-600 font-medium">Saturday - Sunday: 9:00 AM - 6:00 PM</p>
                     <p className="text-sm text-gray-500">Emergency deliveries available 24/7</p>
                   </div>
                 </div>
@@ -176,7 +183,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-teal-700 transform hover:scale-105 transition-all duration-200 shadow-lg flex items-center justify-center space-x-2"
+                  className="w-full bg-gradient-to-r from-teal-600 to-teal-700 text-white py-4 px-6 rounded-lg font-semibold hover:from-teal-700 hover:to-teal-800 transform hover:scale-105 transition-all duration-200 shadow-lg flex items-center justify-center space-x-2"
                 >
                   <Send size={20} />
                   <span>Send Message</span>
